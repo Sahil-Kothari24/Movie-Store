@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revising</title>
+    <style>
+        body{
+            background-color: black;
+            color: whitesmoke;
+        }
+        .navbar{
+            display: flex;
+            border-radius: 15px;
+            background-color: black;
+            font-weight: bold;
+            color: white;
+        }
+        nav{
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar li{
+            display: flex;
+            padding: 15px;
+        }
+        .navbar li:hover{
+            background-color: rgb(81, 87, 87);
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .navbar li a:visited{
+            color: lightgrey;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            height: 1000px;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 700px;
+            justify-content: center;
+            padding: 10px;
+        }
+        .navbar input{
+            margin-top: 1px;
+            position: relative;
+            left: 980px;
+            border-radius: 10px;
+            height: 30px;
+            margin-top: 10px;
+        }
+        form{
+            display: inline-block;
+            justify-content: center; 
+            margin-top: 20px;
+        }
+        .form{
+            padding: 2px;
+        }
+        section img{
+            /* margin-top: 280px; */
+            height: 300px;
+            width: 500px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgb(181, 172, 172);
+        }
+        form input:hover{
+            transform: scale(1.2);
+        }
+        .box{
+            display: flex;
+            /* flex-direction: column; */
+        }
+        .item1{
+            display: flex;
+            width: 100px;
+            height: 100px;
+            font-size: 0px;
+            border-radius: 50px;
+        }
+        #box1{
+            animation-name: box1;
+            animation-duration: 6s;
+            animation-iteration-count: 1;
+            animation-delay: 10s;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            /* transition-property: all;
+            transition-duration: 4s; */ 
+            color: whitesmoke;
+            box-shadow: 2px 2px 1px white;
+        }
+        @keyframes box1 {
+            0%{
+                top: 20%;
+                left: 0%;
+                width: 200px;
+            }
+            /* 25%{
+                left: 25%;
+                width: 300px;
+                font-size: large;
+            } */
+            50%{
+                left: 50%;
+                background-color:black;
+                width: 400px;
+                font-size: larger;
+            }
+            /* 75%{
+                width: 500px;
+                left: 75%;
+                font-size: large;
+            } */
+            100%{
+                top: 20%;
+                left: 0%;
+            }
+        }
+        #box2{
+            left: 86%;
+            animation-name: box2;
+            animation-duration: 6s;
+            animation-iteration-count: 1;
+            animation-delay: 16s;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            color: whitesmoke;
+            text-shadow: 2px 2px black;
+            box-shadow: 2px 2px whitesmoke;
+        }
+        @keyframes box2 {
+            0%{
+                top: 20%;
+                left: 100%;
+                width: 200px;
+            }
+            /* 25%{
+                top: 20%;
+                left: 75%;
+                width: 300px;
+                font-size: large;
+            } */
+            50%{
+                top: 20%;
+                left: 25%;
+                background-color:black;
+                width: 400px;
+                font-size: larger;
+            }
+            /* 75%{
+                top: 20%;
+                left: 25%;
+                width: 500px;
+                font-size: large;
+            } */
+            100%{
+                top: 20%;
+                left: 100%;
+            }
+        }
+        .elements{
+            display: flex;
+        }
+        .item2{
+            border: 1px solid white;
+            padding: 10px;
+            margin-top: 10px;
+            align-items: center;
+            justify-content: center; 
+            width:27%;     
+        }
+        .item2 img{
+            height: 200px;
+            width: 350px;
+            padding-bottom: 12px;
+        }
+        .item2 ul{
+            padding-left: 0px;
+        }
+        .item2 ul button{
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            width: 180px;
+        }
+        .main{
+            font-family: sans-serif;
+            font: whitesmoke;
+            display: none;
+        }
+        .main1{
+            display: none;
+        }
+        .main2{
+            display: none;
+        }
+        .main3{
+            display: none;
+        }
+        .form{
+            padding-left: 20px;  
+            display: flex;
+        }
+        .form1{
+            padding-bottom: 5px;  
+        }
+        .item2 img:hover{
+            transition-duration: 2s;
+            transform: scale(1.2);
+            transition-delay: 0.3s;
+        }
+        #e2 img{
+            height: 600px;
+        }
+        #e3 img{
+            height: 600px;
+        }
+        #e3 .item3 img{
+            height: 250px;
+        }
+        #e2 button:hover{
+            background-color: rgb(31, 143, 162);
+        }
+        #e3 button:hover{
+            background-color: crimson;
+        }
+        section h2{
+            text-shadow: 1px 1px whitesmoke;
+        }
+        #e2 button{
+            display: flex;
+            box-shadow: 1px 1px rgb(59, 121, 121);    
+            border-radius: 8px;
+            padding-bottom: 3px;
+        }
+        #e2 button:hover{
+            box-shadow: 2px 2px 8px rgb(59, 121, 121);  
+        }
+        #e3 button{
+            box-shadow: 1px 1px rgb(59, 121, 121);
+            border-radius: 8px;
+            padding-bottom: 3px;
+        }
+        #e3 button:hover{
+            box-shadow: 2px 2px 8px rgb(168, 82, 82);
+        }
+        .images{
+            display: flex;
+            height: 700px;
+            
+        }
+        .b{
+            margin: 10px 10px;
+            width: 30%;
+            height: 600px;
+        }
+        #b1{
+            animation-name: b1;
+            animation-duration: 18s;
+            animation-iteration-count: infinite;
+            background-image: url('https://images.unsplash.com/photo-1695642579093-2a646b3e89e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');     
+            background-repeat: no-repeat;
+        }
+        #b2{
+            animation-name: b2;
+            animation-duration: 27s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            background-image: url('WhatsApp Image2.jpg');
+            background-repeat: no-repeat;
+            right: 2%;
+            height: 600px;
+        }
+         @keyframes b1{
+            33%{
+                background-image: url('https://images.unsplash.com/photo-1695605117941-e9130a0369ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+                background-repeat: no-repeat;
+            }
+            66%{
+                background-image: url('https://images.unsplash.com/photo-1695049761557-cb56d348c297?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+                background-repeat: no-repeat;
+            }
+        }
+        @keyframes b2{
+            33%{
+                background-image: url('https://images.unsplash.com/photo-1682687220566-5599dbbebf11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+                background-repeat: no-repeat;
+            }
+            66%{
+                background-image: url('https://images.unsplash.com/photo-1682695796954-bad0d0f59ff1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60');
+                background-repeat: no-repeat;
+            }
+        }
+        #e1{
+            display: flex;
+            animation-name: e1;
+            animation-duration: 20s;
+            animation-timing-function: ease-in-out;
+            animation-direction: reverse;
+            animation-iteration-count: infinite;
+            
+        }
+        #e1 img{
+            display: flex;
+            padding-top: 10px;
+        }
+        @keyframes e1{
+            /* 0%,100%{
+                background-image: url('https://images.unsplash.com/photo-1572188863110-46d457c9234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM4fHxjaW5lbWF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60');
+                background-repeat: no-repeat;
+            }  */
+            0%,25%,100%{
+                background-image: url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2luZW1hfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
+                background-repeat: no-repeat;
+            }
+            50%{
+                background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW92aWVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
+                background-repeat: no-repeat;
+             }
+            75%{
+                background-image: url('https://images.unsplash.com/photo-1595769816263-9b910be24d5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2luZW1hfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
+                background-repeat: no-repeat;
+            }
+            
+            /* 75%{
+                background-image: url('https://images.unsplash.com/photo-1607376995899-383532a918b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fGNpbmVtYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60');
+                background-repeat: no-repeat;
+            } */
+        }
+        .item2 #e4{
+            display: flex;
+            width: 20%;
+        }
+        #e4 button:hover{
+            background-color: rgb(151, 140, 140)
+        }
+        .main1{
+            color: rgb(76, 205, 227);
+            font-size: large;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <ul class="navbar">
+                <li class="item"><a href="http://www.google.com">Home</li></a>
+                <li class="item"><a href="mailto:sahilshelby24@gmail.com">Contact Us</li></a>
+                <li class="item" onclick="first()">About</li>
+                <li class="item">Help</li>
+                <input type="search" name="search" id="" placeholder="search here">
+            </ul>
+        </div>
+        <div class="box">
+            <div class="item1" id="box1">k</div>
+            <div class="item1" id="box2">l</div>
+        </div>
+        <section>
+            <img src="My Logo.jpg" alt="galaxy">
+            <h2>Welcome to my site</h2>
+            At our store we have DVD'S and CD's of many classic movies at minimal costs. This webpage is simple but dare you say anything about it, took me whole day to make it.</section>
+        <div class="elements">
+            <div class="item2" id="e1">
+            </div>
+            <div class="item2" id="e2">
+                <h3><i>THE SHAWSHANK REDEMPTION</i></h3>
+                <img src="https://m.media-amazon.com/images/I/91VIHzW1kvL._AC_UF1000,1000_QL80_.jpg" alt="">
+                <button>Rs. 149/-</button>
+                <hr>
+                <h3><i>ZODIAC</i></h3>
+                <img src="https://m.media-amazon.com/images/M/MV5BN2UwNDc5NmEtNjVjZS00OTI5LWE5YjctMWM3ZjBiZGYwMGI2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg" alt="poets">
+                <button>Rs. 99/-</button>
+            </div>
+            <div class="item2" id="e3">
+                <h3><i>PARASITE</i></h3>
+                <img src="https://assets.mubicdn.net/images/notebook/post_images/29832/images-w1400.jpg?1579570864" alt="parasite">
+                <button>Rs. 199/-</button>
+                <hr>
+                <div class="item3">
+                <h3><i>BATMAN</i></h3>
+                <img src="1297317.jpg" alt="">
+                <button>Rs. 149/-</button>
+                <hr>
+                </div>
+                <h3><i>12 ANGRY MEN</i></h3>
+                <img src="https://m.media-amazon.com/images/S/pv-target-images/08c56299bd22f83264a20025be29f9e6d47664792cde0d879bbd6f0cd3d673c8.jpg" alt="">
+                <button>Rs. 99/-</button> 
+            </div>
+            <div class="item2" id="e4">
+            <ul>
+                <button onclick="hideShow()">About me</button>
+                <div id="main" class="main1"><i>What to write, you might already know who I am. Just want to create something all the time, that's all.</i></div>
+                <button onclick="hideshow()">Why movies</button>
+                <div id="main3" class="main1"><i>You see movies are the things that make life more interesting and worth living. We all watch our own imagined movies in our head all the time, where we are the <b> writers and directors</b> of our own film, except nobody can see it, unless you make it. So go out there and make some movies, <b>Go</b>!</i></div>
+                <button onclick="showHide()">My fav movie</button>
+                <div id="main2" class="main1"><a href="https://www.imdb.com/title/tt0816692/">INTERSTELLAR</a></div> 
+                <button onclick="showhide()">Time in India</button>
+                <div id="main1" class="main1"></div>
+            </ul>
+            </div>
+        </div>
+        <div class="images">check this
+            <div class="b" id="b1">cool</div>
+            <div class="b"id="b2">pleasant day!</div>
+        </div>
+        <h2>If you like our services please fill this form!</h2>
+        <div class="form">
+            <form>
+                <div class="form1">
+                    <input type="text" name="" placeholder="Name">
+                </div>
+                <div class="form1">
+                    <input type="text" name="" placeholder="City">
+                </div>
+                <div class="form1">
+                    <input type="password" name="" placeholder="password"></div>
+                <button type="submit">submit</button>
+                <button type="reset" onclick="second()">reset</button>
+            </form>
+        </div>
+    </header>
+<script src="a1.js"></script>
+</body>
+</html>
